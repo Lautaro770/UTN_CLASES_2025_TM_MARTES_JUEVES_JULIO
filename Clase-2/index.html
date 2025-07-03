@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 
 <body>
+    <!-- anclas -->
+    <a href="./pages/contacto.html">Ir a contacto</a>
+    <a href="./pages/formularios/formulario.html">Ir a formulario</a>
+
+    <!-- targer='_blank' permite que el sitio se abra en otra pestaña -->
+    <a href="https://www.mercadolibre.com.ar/" target="_blank">Ir a mercado libre</a>
+
+    <a href="./index.html#ingredientes">Ir a ingredientes</a>
 
     <!-- TODO LO QUE SEAN ESTILOS LO VEMOS EN CSS -->
 
@@ -22,6 +30,8 @@
     <h2>Empanadas de pollo</h2>
 
     <h2>Empanadas de Jamon y Queso</h2>
+
+
 
     <!-- Etiqueta para hacer parrafos -->
     <p>
@@ -67,7 +77,8 @@
     </ol>
 
     <!-- unordered list -->
-    <h3>Ingredientes:</h3>
+    <!-- un id debe ser un valor unico en la pagina -->
+    <h3 id="ingredientes">Ingredientes:</h3>
     <ul>
         <!-- list item -->
         <li>harina</li>
@@ -91,6 +102,15 @@
         </li>
         <li>3 cebollas (medianas)</li>
     </ul>
+
+    <!-- 
+    alt es el texto alternativo, en caso de no poder acceder a la imagen el navegador mostrara el texto alternativo
+    Si no hay texto alternativo el navegador puntuara negativamente nuestra pagina
+
+    width: Ancho de la imagen
+    height: Alto de la imagen
+    -->
+    <img src="./images/auto-rojo.webp" alt="Auto sedan rojo"  height="200px" >
 
 </body>
 
