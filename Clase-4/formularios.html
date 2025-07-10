@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registro</h1>
+    <!-- Contener el formulario, si no hay form NO hay formulario -->
+    <form>
+        <div>
+            <!-- Se usa para indicar que se debe escribir -->
+            <label for="full_name">Escribe tu nombre completo:</label>
+    
+            <!-- Indicamos que hay un campo de ingreso de informacion -->
+            <input type="text" id="full_name" required minlength="10" maxlength="12" placeholder="Joe doe"/>
+        </div>
+        <div>
+            <label for="email">Escribe tu email:</label>
+            <input type="email" id="email" required placeholder="joedoe@mail.com"/>
+        </div>
+        <div>
+            <label for="contrasena">Escribe tu contraseña:</label>
+            <input type="password" id="contrasena" required/>
+            <!-- type="button" indica que es un button generico -->
+            <button type="button">Mostrar</button>
+        </div>
+
+        <div>
+            <label for="dni">Adjunta el dorso de tu DNI</label>
+            <input type="file" id="dni" >
+        </div>
+
+        <div>
+            <label for="comentario">Deja tu comentario</label>
+            <textarea id="comentario" cols="5" rows="2" minlength="20" maxlength="300" required></textarea>
+        </div>
+
+        <div>
+            <label for="pais">Selecciona un pais:</label>
+            <select id="pais">
+                <!-- Value no lo vamos a usar hasta JS -->
+                <option value="AR">Argentina</option>
+                <option value="FR">Francia</option>
+                <option value="BR">Brasil</option>
+                <option selected disabled>No seleccionado</option>
+            </select>
+        </div>
+
+        <!-- <input type="submit" value="Registrar"> -->
+        <!-- Cualquier <button> que este dentro de nuestro <form> tendra type submit por defecto -->
+        <button type="submit">
+            Registro
+        </button>
+    </form>
+</body>
+</html>
