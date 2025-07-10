@@ -1,0 +1,90 @@
+/* Siempre los imports van arriba de todo en CSS */
+/* @import url('./body.css'); */
+
+/* selector universal: Lo usamos para dar un estilo a todos los elementos de la pagina*/
+*{
+    background-color: blue;
+    font-family: sans-serif;
+}
+
+/* Aca ya solo puede ir codigo CSS */
+/* Selectores de CSS: nos permiten seleccionar elementos */
+/* sintaxis:
+        selector{
+            propiedad: valor;
+        }
+        */
+/* h1, h2{
+            color: red;
+            font-size: 32px;
+            font-family: sans-serif;
+        } */
+
+
+/* 
+Especificidad:
+No todos los estilos tienen la misma jerarquia, hay estilos mas especificos que otros
+
+h1{
+    color: white;
+}
+
+.titulo{
+    color: red;
+}
+
+La clase es mas especifica que el selector de elemento por ende siempre ganara
+
+Piramide de especificidad:
+(Mayor especificidad)
+-!important: Son mala practica, es poco sostenible en el tiempo
+-inline styles
+-Selector de ID
+-Selector de Class (se usa)
+-Selector de Element (se usa)
+-Selector universal (se usa)
+(Menor especificidad)
+*/
+
+
+
+/* Selector de clase */
+.titulo {
+    color: red;
+    font-size: 32px;
+    background-color: brown;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.subrayado {
+    /*
+            text-decoration: underline (subrayado) color grosor
+             */
+    text-decoration: underline red 1px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+h1{
+    color: blueviolet;
+}
+/* 
+Cascada: La ultima propiedad en definirse es la que va a quedar como estilo 
+La cascada SOLO se aplica si la especificidad es la misma
+*/
+/* .titulo {
+    color: rgb(0, 26, 255);
+    font-size: 52px;
+} */
+
+.subtitulo {
+    color: rgb(133, 2, 2);
+    font-size: 28px;
+}
+
+
+
+/* Selector de ID (es mala practica, siempre usar clases) */
+#boton-especial{
+    background-color: aqua;
+}
+
