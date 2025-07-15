@@ -1,0 +1,99 @@
+/* Indicamos al navegador que interprete este codigo de css */
+/* Este CSS es el que nos permite usar la fuente roboto en la aplicacion */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('./fonts.css'); */
+/* 
+Los navegadores tienen sus estilos por defecto, dependiendo del navegador estos van a variar.
+*/
+
+/* Normalizacion de CSS o NORMALIZE */
+*{
+    /* Indico que todos los elementos tengan Poppins como font family */
+    font-family: 'Poppins', "sans-serif";
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+.titulo{
+    /* Cambia la familia de fuente */
+    font-family: "Roboto", sans-serif;
+    font-size: 48px;
+    color: #0788ea;
+    /* Alto de la linea de texto */
+    line-height: 60px;
+    /* Espaciado entre palabras */
+    word-spacing: 10px;
+    /* Espaciado entre letras */
+    letter-spacing: 0px;
+    /* 
+    TEXT DECORATION
+    tipo: underline, line-through, overline
+    color: valor-color
+    grosor de decoracion: px
+    tipo de linea: solid, dotted, dashed, wavy
+    */
+    /* text-decoration: red underline 5px wavy; */
+    margin: 0;
+    /* 
+    TEXT SHADOW:
+    eje-x eje-y blur (difuminado) color;
+    */
+    /* text-shadow: 2px -10px 10px #6262ff; */
+    text-align: center; 
+    font-weight: 900;
+    font-style: italic;
+    /* word-wrap: break-word; */
+}
+
+.titulo-tachado{
+    font-family: "Roboto", 'sans-serif';
+    font-size: 48px;
+    /* text-decoration: line-through underline green; */
+}
+
+p{
+    text-align: justify;
+}
+
+/* box-model */
+.caja-1{
+    /*
+    DEFAULT 
+    box-sizing: content-box; 
+    Hace que el ancho y el alto de una caja sean para definir las dimensiones de la caja de contenido
+    */
+    /* box-sizing: border-box
+    Definimos que el ancho y alto de la caja sean para definir las dimensiones de la caja de border
+    */
+    box-sizing: border-box;
+    background-color: #0788ea;
+    width: 200px;
+    height: 200px;
+    /* 
+    border:
+    grosor
+    tipo
+    color
+    */
+    border-left: 5px solid black;
+    /* padding-left: 20px; */
+
+    /* A todos los lados */
+    /* padding: 10px;  */
+
+    /* Vertical Horizontal */
+    padding: 10px 20px; 
+
+    /* TOP horizontal BOTTOM */
+    /* padding: 10px 20px 30px; */
+
+    /* TOP RIGHT BOTTOM LEFT */
+    /* padding: 10px 20px 30px 40px; */
+    margin-left: 20px;
+    border-radius: 10px;
+}
