@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.padre{
+    background-color: rgb(71, 115, 4);
+    /* viewport width
+    Es una medida relativa al tamaño de la pantalla de viewport
+    1vw = 1% del ancho del viewport
+    100vw = 100% del ancho del viewport
+    */
+    width: 100vw;
+    /* viewport height 
+    Es una medida relativa al tamaño de la pantalla de viewport
+    1vh = 1% del alto del viewport
+    100vh = 100% del alto del viewport
+    */
+    height: 100vh;
+
+    /* Habilita el uso de propiedades flexibles (siempre debe estar display flex en el padre) */
+    display: flex;
+
+    /* Nos permite marcar en que direccion va a ir el flexbox */
+    /* El valor por defecto de flex-direction es row */
+    flex-direction: row;
+    /* Gap: Interespaciado entre hijos (es una propiedad flexible) */
+    gap: 24px;
+
+    /* justify-content: Nos permite marcar el alineamiento horizontal (si flex-direction es row) o vertical (si el flex-direction es column) de los elementos */
+    justify-content: center;
+
+    /* aling-items: Nos permite marcar el alineamiento vertical (si flex-direction es row) o horizontal (si el flex-direction es column) de los elementos */
+    align-items: center;
+
+    /* recomendacion:
+    Si flex direction es row, justify content alinea HORIZONTALMENTE
+    ... significa que aling-items alinea verticalmente
+    ...y tambien podemos deducir que si fuera column:
+    ... justify-content: vertical
+    ... aling-items: horizontal
+    */
+}
+
+.hijo{
+    width: 250px;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+}

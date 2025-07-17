@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+*{
+    font-family: "DM Sans", sans-serif;
+}
+
+
+.titulo{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+}
+.subtitulo{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 8px;
+}
+.descuento{
+    color: #673de6;
+    font-weight: 700;
+}
+
+.boton{
+    border-radius: 8px;
+    min-width: 190px;
+    text-align: center;
+    padding: 12px 48px;
+    border: none; /* Quitamos el borde */
+}
+
+.boton-primario{
+    font-weight: 500;
+    background-color: #683ee6;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.boton-secundario{
+    font-weight: 500;
+    background-color: #e3dcfc;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+}
+
+
+.precio-mensual{
+    font-size: 20px;
+}
+.precio-valor{
+    font-weight: 700;
+    font-size: 40px;
+}
