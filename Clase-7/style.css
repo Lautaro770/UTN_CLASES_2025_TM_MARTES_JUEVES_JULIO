@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+main{
+    background-color: #ebebeb;
+    /* Esto es solo para emular contenido */
+    min-height: 100vh;
+}
+
+/*----------------------- ML product section -------------------------*/
+
+.ml-product-section-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.ml-product-section{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 1180px;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 
+    0px 1px 2px rgba(0, 0, 0, 0.105)
+    ;
+}
+
+.ml-product-section__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ml-product-section__header__heading-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.ml-product-section__header__heading-container h2{
+
+}
+
+.ml-product-section__header__pagination{
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+}
+
+.pagination-circle{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgb(227, 227, 227);
+}
+
+.pagination-circle--active{
+    background-color: rgb(52, 131, 250);
+}
+
+
+/*---------------------- ML product section (end) --------------------*/
