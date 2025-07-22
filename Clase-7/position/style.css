@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.padre{
+    height: 100vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    background-color: greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hijo{
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.hijo-1{
+    background-color: rgb(99, 99, 99);
+}
+
+.hijo-2{
+    background-color: red;
+    position: relative;
+    /*cualquier position distinto de static me permite usar las propiedades: top, bottom, left, right*/
+    /* 
+    Eje y: las propiedades que podemos usar son top y bottom, pero top tiene prioridad sobre bottom
+    Eje x: la propiedades que podemos usar son left y right, pero left tiene prioridad sobre right
+    Tip para acordarse de la prioridad: como leemos una leemos una hoja, de izq a derecha de arriba hacia abajo
+    */
+    top: 300px;/* 40px de espacio hacia arriba desde la posicion original del elemento */
+    bottom: 20px;
+    left: 200px;
+    z-index: 1;
+}
+
+.hijo-3{
+    background-color: aqua;
+    z-index: 3;/* Z-index funciona con cualquier tipo de position */
+    position: static;
+}
