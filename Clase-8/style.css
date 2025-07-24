@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.padre{
+    height: 100vh;
+    background-color: rgb(106, 171, 41);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+    margin-bottom: 100vh;
+    position: relative;
+}
+
+
+.hijo{
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* llamamos al primer elemento que se llame .hijo */
+.hijo:nth-child(1){
+    background-color: blue;
+}
+
+.hijo:nth-child(2){
+    background-color: yellow;
+    /* 
+    Position: Absolute, el elemento dejara de ser contabilizado en en plano, es decir ya no ocupara espacio y se quedara flotando en la pagina
+    Ira a buscar al elemento mas cercano con position distinto de static como padre, sino lo encuentra el viewport sera tomado como el padre y desde ese padre se posicionara
+    Osea que top: 10px; es 10px de espacio respecto hacia la parte de arriba del padre
+    */
+    /* position: absolute;
+    right: 16px;
+    top: 16px; */
+    /* position: fixed;
+    bottom: 0px;
+    right: 0px; */
+
+    position: sticky;
+    top: 10px;
+}
+
+.hijo:nth-child(3){
+    background-color: brown;
+}
+
