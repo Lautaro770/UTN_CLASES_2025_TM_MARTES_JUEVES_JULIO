@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+*{
+    font-family: "DM Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.align{
+    display: flex;
+    align-content: center;
+}
+/* -------------------- */
+
+.nav-bar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foto-host img{
+    width: 150px;
+    box-sizing: border-box 20px;
+    
+}
+
+.navigation-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+}
+
+.navigation-section-start{
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-buttons-right{
+    width: 190px;
+}
+
+.button-micuenta{
+    background-color: transparent;
+    color: black;
+    font-weight: 700;
+    border: 2px solid;
+    border-radius: 8px;
+}
+
+.clickables{
+    justify-content: left;
+    align-items: center;
+}
+
+summary{
+    width: 80px;
+}
+
+.list-items-horiz{
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    height: 30px;
+
+}
+
+.separanding{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.titulo-principal{
+    font-size: 46px;
+}
+
+.under-titulo{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.palabras-violeta{
+    color: #673de6;
+}
+
+.div-textitos{
+    padding-left: 15px;
+    max-width: 530px;
+}
+
+.botoncitos-generales{
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height:  1;
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    padding: 12px 48px;
+}
+
+.botoncitos-sin-botonear{
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height:  1;
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    padding: 12px 48px;
+}
+
+.separanding-buttons{
+    display: flex;
+}
+
+.botoncitos-dark-purple{
+    
+    background-color: #673de6;
+    border-color: #673de6;
+    color: white;
+}
+
+.botoncitos-dark-purple:hover{
+    background-color: #5025d1; /* Un tono más oscuro al pasar el mouse */
+    border-color: #5025d1;
+}
+
+.botoncitos-light-purple{
+    background-color: #e2dbfc;
+    border-color: #e2dbfc;
+}
+
+/* -------------- Flotador SECTION ----------------  */
+
+.section__floating{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
+
+.section__floating__chat{
+    padding: 10px;
+    color: white;
+    background-color: #5a32c6;
+    border-radius: 20px;
+}
+
+/* -------------- Recomendations SECTION ----------------  */
+
+.section__recomendation__padding{
+    padding: 50px;
+}
+
+.section__recomendation__wordpresss{
+    font-size: 25px;
+}
+
+/* -------------- Migration SECTION ---------------- */
+
+.section__services{
+    background-color: #1f1346;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section__services__content{
+    width: 1128px;
+    max-width: 1128px;
+}
+
+.section__services__content--with-gaps{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.section__services__heading{
+    /* border: #e2dbfc 3px solid; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: auto; */
+    text-align: center;  
+}
+
+.section-description{
+    color: white; 
+    font-size: 16px; 
+    line-height: 24px;
+}
+
+.section-title{
+    color: white; 
+    font-size: 36px; 
+    line-height: 40px;
+}
+
+.mb-1{
+    margin-bottom: 12px;
+}
+.mb-2{
+    margin-bottom: 24px;
+}
+.mb-3{
+    margin-bottom: 36px;
+}
+
+    /* -------------- Migration CARDS ---------------- */
+    
+    .section__services__cards-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .section__services__card-content{
+        background-color: #2f1c6a;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 360px;
+        height: 280px;
+        padding: 32px;
+    }
+
+    .content-card-title{
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .content-card-description{
+        color: white;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+
+        /* -------------- Migration CARD ICONS ---------------- */
+
+    /* FIXME: necesito que el icon sea más grande */
+
+        .section__services__icon-container{
+            display: flex;
+            height: 50px;
+        }
+        
+        .card-icon{
+            width: 50px;
+            background-color: #673de6;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+                /* -------------- Migration BUTTON ---------------- */
+                
+                .section__services__button{
+                    /* border: #e2dbfc 3px solid; */
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 168px;
+                    height: 48px;
+                    color: white;
+                    background-color: #673de6;
+                    border-radius: 8px;
+                    font-weight: 700;
+                    cursor: pointer;
+
+                }
