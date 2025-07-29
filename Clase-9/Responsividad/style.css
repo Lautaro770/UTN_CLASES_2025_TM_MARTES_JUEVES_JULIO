@@ -1,0 +1,53 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.menu-btn{
+    display: none;
+}
+
+.padre{
+    height: 100vh;
+    background-color: green;
+}
+
+/* @media screen es una condicion de CSS*/
+/* Si tengo menos de 1200px se ejecutara este bloque de codigo */
+@media screen and (max-width: 1200px) {
+    .padre{
+        background-color: red;
+    }
+
+    nav{
+        display: none;
+    }
+    .menu-btn{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .padre{
+        background-color: blueviolet;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+
+}
+
+/* Responsividad */
+/* Desktop First = CRM, Backoffice, sistemas de analisis de datos (Dashboards), sucursales web de bancos.. */
+/* Mobible First = Landings, Aplicaciones donde acceden usuarios finales (ecommerce, blogs, redes sociales)*/

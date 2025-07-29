@@ -180,8 +180,9 @@ summary{
 }
 
 .section__services__content{
-    width: 1128px;
+    /* width: 1128px; */
     max-width: 1128px;
+    margin: 0 50px;
 }
 
 .section__services__content--with-gaps{
@@ -228,6 +229,7 @@ summary{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 24px;
     }
     
     .section__services__card-content{
@@ -289,3 +291,31 @@ summary{
                     cursor: pointer;
 
                 }
+
+@media screen and (max-width: 1200px) {
+    .section-title{
+        font-size: 28px;
+    }
+    .section__services__cards-container{
+        flex-direction: column;
+    }
+
+    .section__services__content{
+        max-width: 688px;
+    }
+
+    .section__services__card-content{
+        width: 100%;
+        height: min-content;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .section__services{
+        padding: 0 16px;
+    }
+    .section__services__content{
+        max-width: 508px;
+        margin: 0;
+    }
+}
