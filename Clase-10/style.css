@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+
+.img-container{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 1px dashed red;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img{
+    height: 100%;
+}
+
+
+.img-container-2{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 200ms linear;
+}
+
+.img-container-2:hover{
+    /* transform: translateX(100px); */
+    /* transform: rotateX(180deg); */
+    /* transform: rotateY(360deg); */
+    transform: scale(1.2);
+    transition: 200ms linear;
+}
+
+/* Cuando este encima de mi contenedor */
+.img-container-2:hover button{
+    opacity: 1;
+    background-color: rgb(225, 0, 255);
+    width: 200px;
+    /* visibility: visible; */
+    transition: 200ms linear;
+}
+
+.img-container-2 button{
+    position: absolute;
+    /* display: none; */
+    /* visibility: hidden; */
+    opacity: 0;
+    width: 100px;
+    background-color: rgb(255, 0, 0);
+    transition: 200ms linear;
+
+   
+    border: none;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 10px;
+    color: white;
+    
+}
+
+.img-container-2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes girar-animacion{ 
+    0%{
+        transform: rotateX(0deg);
+        border-color: red;
+    }
+    50%{
+        border-color: green
+    }
+    100%{
+        border-color: blue;
+        transform: rotate(-360deg);
+    }
+}
+
+.loader {
+    background-color: transparent;
+    border-top: 2px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: girar-animacion 1s linear infinite;
+}
