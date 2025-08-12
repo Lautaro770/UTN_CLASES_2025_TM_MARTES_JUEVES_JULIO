@@ -9,9 +9,9 @@ Temas que vimos:
 Temas que vamos a ver hoy:
 - Operadores logicos ✅
 - Variables ✅
-- Bloques 
-    -scopes
-- Funciones: prompt, alert, isNaN
+- Bloques ✅
+    -scopes ✅
+- Funciones: prompt, alert, isNaN ✅
 - Condicionales
 */
 
@@ -140,7 +140,7 @@ var dinero = 9
 //LET -> ES6 > (Javascript moderno) 🤩
 //Se pueden reasignar
 //Si no se inicializa el valor, por defecto es undefined
-//No se pueden redeclarar 
+//No se pueden redeclarar (en el mismo bloque)
 //No tiene hoisting
 
 
@@ -162,4 +162,181 @@ nombre = 'pedro'
 /* 
 const PI = 3.14
 const PORT = 8080 
+*/
+
+//Bloque de codigo:
+//Un fragmento de codigo
+
+/* 
+{
+    console.log('hola')
+} 
+*/
+
+//scopes
+
+/* let nombre = 'pepe'
+
+{
+    let nombre = 'juan'
+    console.log(nombre)
+    {
+        let nombre = 'maria'
+        console.log(nombre)
+    }
+    console.log(nombre)
+}
+
+console.log(nombre) */
+/* let nombre = 'pedro'
+{
+    nombre = 'juan'
+    {
+        nombre = 'maria'
+    }
+}
+console.log(nombre) */
+
+/* let nombre = 'pepe'
+console.log(nombre) //pepe
+{
+    let nombre = 'juan'
+    console.log(nombre) //juan
+    {
+        let nombre = 'maria'
+        console.log(nombre) //maria
+    }
+    console.log(nombre) //juan
+    {
+        nombre = 'pedro'
+        console.log(nombre) //pedro
+        {
+            nombre = 'julieta'
+            console.log(nombre) //julieta
+        }
+        console.log(nombre) //julieta
+    }
+    console.log(nombre) //julieta
+}
+console.log(nombre) //pepe */
+
+/* pepe, juan, maria, juan, pedro, julieta, julieta, julieta, pepe */
+
+//Garbage Collection
+//El recolector de basura va a reconocer que una vez ejecutado el bloque, numero ya no tiene sentido que se guarde en la memoria, por ende lo eliminara
+/* {
+    let numero = 0
+    console.log(numero)
+} */
+
+//VAR NO TIENE SCOPES, OSEA SIEMPRE ES GLOBAL
+
+/* 
+{
+    var numero = 10
+}
+ */
+
+/* let nombre = 'pepe'
+{
+    let nombre
+    console.log(nombre)
+} */
+
+
+//Funciones nativas
+//Son funciones que vienen en el lenguaje
+//TODAS las funciones tienen retorno
+//Que es el retorno?
+//Es el resultado de la funcion, cuando la funcion se termine de ejecutar retornara algo, si no tiene retorno suele ser undefined
+
+//alert -> nos permite mandar un popup en el navegador
+//alert('Hola que tal')
+
+//prompt -> nos permite mandar un popup pero con un input
+//Retorna el string escrito por el usuario o null si le da al boton de cancelar
+
+/* let mensaje = prompt('Escribe algo')
+console.log(mensaje) */
+
+
+/* 
+NaN es el unico valor incomparable, es decir nisiquiera al compararlo consigo mismo da verdadero
+( 'hola' - 'chau' ) == NaN -> false
+NaN == NaN
+false
+
+Pedi un numero y validalo
+
+let numero = prompt('dame un numero por favor') //escribio 'hola'
+numero = Number(numero) //NaN
+let es_numero_valido = numero != NaN
+*/
+
+/* 
+let numero = prompt('dame un numero por favor') //escribio 'hola'
+numero = Number(numero) //NaN
+//Cuando es un numero valido? cuando NO sea un NaN
+let es_numero_valido = !(isNaN(numero)) 
+
+console.log(es_numero_valido) 
+*/
+
+//Si la persona se llama pepe lo dejo pasar
+//Sino le doy una patada ninja
+
+
+//IF es para hacer condiciones
+//Else se ejecuta en caso de que IF no se ejecute
+//Else siempre debe ir seguido de un IF
+
+/* let nombre = prompt('Dame tu nombre')
+
+nombre = nombre.trim() // -> Quitamos los espacios demas al principio y fin de un string. EJ: 'hola  '.trim() -> 'hola'
+nombre = nombre.toLowerCase() // -> pasamos el nombre a minuscula
+
+if( nombre === 'pepe'  ){
+    console.log('te dejo pasar')
+}
+else{
+    console.log('patada ninja')
+} */
+
+//Si el dia es lunes escribir ☕
+//Si el dia es martes escribir ☢🆘
+//Si el dia es miercoles escribir 💤
+//Si el dia es jueves escribir 😨
+//Si el dia es viernes escribir 😁
+
+let dia_semana_actual = 'lunes'
+
+if(dia_semana_actual === 'lunes'){
+    console.log('☕')
+}
+else if(dia_semana_actual === 'martes'){
+    console.log('☢🆘')
+}
+else if(dia_semana_actual === 'miercoles'){
+    console.log('💤')
+}
+else if(dia_semana_actual === 'jueves'){
+    console.log('😨')
+}
+else if(dia_semana_actual === 'viernes'){
+    console.log('😁')
+}
+else{
+    console.log('Aprovecha que estas de finde 😴😎🧐')
+}
+
+/* 
+Tarea
+
+Solicitar:
+Dinero edad y nombre
+
+Si el nombre es pepe dejar pasar
+Si no verificar si el dinero es mayor a 50000 y la edad es mayor a 18 y menor a 80
+Si no dar una patada ninja
+
 */
