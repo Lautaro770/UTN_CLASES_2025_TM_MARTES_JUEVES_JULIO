@@ -69,7 +69,11 @@ while(condicion_nombre){
 Las entradas de datos se hacen con PROMPT
 Las salidas de datos se hacer con ALERT o CONSOLE.LOG
 
-Tarea de while:
+Tarea de while y for:
+    Solicitar 3 notas (notas trimestrales), acumularlas (sumarlas entre si) y obtener el promedio
+        -Las notas se deben validar (numero, entre 0 y 10), sino se ingresa una nota correcta volver a solcitar
+
+
     Guardar en memoria una contraseña (la que gustes), y solcitar al usuario una contraseña, si el usuario escribe una contraseña distinta, volver a solicitar. Si es correcta decir contraseña correcta.
 
 
@@ -81,6 +85,8 @@ Tarea de while:
         -No puede ser null o ''
         -Tiene que ser '+', 'sumar', '-','restar', '*', 'multiplicar', '/', 'dividir'
             -Si el sumar tiene mayusculas se lo deberia aceptar igualmente, EJ: 'SuMar' (Pro Tip: usar el .toLowerCase())
+    
+
 */
 
 /* 
@@ -97,7 +103,7 @@ Bucle FOR
 Los bucles FOR tienen Iteraciones
 */
 
-let resultado = 0
+/* let resultado = 0
 
 for(
     let iterador = 1; //donde queremos que empieze el contador
@@ -108,4 +114,5 @@ for(
     resultado = resultado + Number(numero)
 }
 
-alert('El resultado de su compra es: $' + resultado)
+alert('El resultado de su compra es: $' + resultado) */
+
