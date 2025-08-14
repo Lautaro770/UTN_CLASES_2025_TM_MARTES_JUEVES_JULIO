@@ -253,8 +253,8 @@ console.log(nombre) //pepe */
 //alert -> nos permite mandar un popup en el navegador
 //alert('Hola que tal')
 
-//prompt -> nos permite mandar un popup pero con un input
-//Retorna el string escrito por el usuario o null si le da al boton de cancelar
+//prompt -> nos permite mandar un popup pero con un input (NOS PERMITE SOLICITAR UN DATO)
+//si le da al boton de aceptar retorna el string escrito por el usuario o null si le da al boton de cancelar
 
 /* let mensaje = prompt('Escribe algo')
 console.log(mensaje) */
