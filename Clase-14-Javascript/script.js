@@ -75,7 +75,7 @@ Tarea de while y for:
 
 
     Guardar en memoria una contraseña (la que gustes), y solcitar al usuario una contraseña, si el usuario escribe una contraseña distinta, volver a solicitar. Si es correcta decir contraseña correcta.
-
+ 
 
     Solicitar una operacion matematica, si no se elige UNA operacion correcta volver a solcitar
     Luego solicitar 2 numeros y validar que sean numeros, en caso de no serlo volver a solicitar
