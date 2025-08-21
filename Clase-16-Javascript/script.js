@@ -178,4 +178,50 @@ let carrito = [
         precio: 8000
     }
 ]
-//Calcular el total de la compra
+//1. Calcular el total de la compra
+let precio_final = 0
+for(let item of carrito){
+    precio_final = precio_final + (item.precio * item.cantidad_comprada)
+}
+console.log('El precio final de la compra es: $' + precio_final)
+
+//2. Crear una funcion que dado un carrito nos calcule el total de la compra EJ: calcularTotalCompra(carrito) retorna precio_final
+
+function calcularTotalCompra(carrito){
+
+    let precio_final = 0;
+    for(let item of carrito)
+    {
+        precio_final = precio_final + (item.precio * item.cantidad_comprada);
+    }
+    return precio_final;
+}
+
+
+//3. Crear una funcion llamada buscar productoDelCarritoPorId(carrito, id_producto) debe retornar el producto encontrado o null en caso de no hacerlo
+
+//4. Crear una funcion llamada buscarProductoDelCarritoPorTermino(carrito, termino_de_busqueda) debe retornar el producto que su titulo incluya el termino de busqueda: Ej:  buscarProductoDelCarritoPorTermino(carrito, 'al') debe retornar el producto afajor. Pro tips: Acuerdensen que existe el metodo .includes para strings
+//EJEMPLO DE FILTRO POR NOMBRE DEL EJERCICIO 4
+//item.nombre.toLowerCase().includes(termino_busqueda.trim().toLowerCase('SH'))
+
+
+
+function buscarPorId ( lista, id_buscado ){
+    for(let elemento of lista){
+        if(elemento.id === id_buscado){
+            return elemento
+        }
+    }
+    return null
+}
+
+function productoDelCarritoPorId(carrito,id_producto){
+    for (let index = 0; index < carrito.length; index++) {
+        let item = carrito[index]
+        if(item.id === id_producto){
+            return item
+        }
+    }
+    return null
+}
+console.log(productoDelCarritoPorId(carrito,2))
