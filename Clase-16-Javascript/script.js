@@ -225,3 +225,16 @@ function productoDelCarritoPorId(carrito,id_producto){
     return null
 }
 console.log(productoDelCarritoPorId(carrito,2))
+
+
+    
+function buscarProductoDelCarritoPorTermino(carrito, termino_de_busqueda){
+    for(let nombre_producto of carrito){
+        if(nombre_producto.titulo.toLowerCase().includes(termino_de_busqueda.trim().toLowerCase())){
+            return nombre_producto.titulo;
+        }
+    }
+    return null;
+}
+let mostrar_producto_por_nombre = buscarProductoDelCarritoPorTermino(carrito, termino_de_busqueda)
+alert("tu estaras buscando: "+ mostrar_producto_por_nombre)
