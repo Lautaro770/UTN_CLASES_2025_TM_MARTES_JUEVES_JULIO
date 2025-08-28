@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Personas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f1f8ff;
+        }
+        .container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registro de Personas</h1>
+    
+    <div class="container">
+        <table> <!-- Marca que existe una tabla -->
+            <thead> <!-- Table Head = Donde van a estar las columnas de la tabla -->
+                <tr> <!-- Table Row = Fila de valores -->
+                    <th>ID</th> <!-- Table Header = Se usa para el nombre de la columna -->
+                    <th>Nombre</th>
+                    <th>DNI</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+            <tbody id="table-body_users"><!-- Body de la tabla = Donde estaran los valores de tabla -->
+                
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Lista de productos:</h2>
+    <div id="products">
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
