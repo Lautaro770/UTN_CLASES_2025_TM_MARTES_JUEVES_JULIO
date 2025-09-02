@@ -38,7 +38,7 @@ const mensajes = [
 
 /*
 -Llamar al messages-list
--crear un funcion que al pasarle un array de mensajes te renderize en messages-list una lista de mensajes'
+-crear un funcion que al pasarle un array de mensajes te renderize en messages-list una lista de mensajes
 -Cada mensaje debe tener este HTML: 
     <div class="message">
         <span class="message-sender">Pedrito</span>
