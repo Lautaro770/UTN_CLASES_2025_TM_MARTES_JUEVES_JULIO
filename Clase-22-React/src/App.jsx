@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductCard from './Components/ProductCard/ProductCard'
+import ColorCard from './Components/ColorCard/ColorCard'
 
 //Los archivos que contienen componentes tambien van con mayuscula, PascalCase / UpperCamelCase
 
@@ -11,25 +12,55 @@ function App() {
   return (
     <div>
       <h1>Hola mundo</h1>
-      <ProductCard 
-        name='polystation' 
+      <ProductCard
+        name='polystation'
         price={9000}
         bg_color={'#708993'}
       />
-      <ProductCard 
-        name='papafritas' 
+      <ProductCard
+        name='papafritas'
         price={900000}
         bg_color={'#139ed5ff'}
       />
-      <ProductCard 
-        name='mesa de madera' 
+      <ProductCard
+        name='mesa de madera'
         price={9000.10}
         bg_color={'#938970ff'}
       />
-      <ProductCard 
-        name='tv samsung' 
+      <ProductCard
+        name='tv samsung'
         price={9000.40}
         bg_color={'#937090ff'}
+      />
+      <ColorCard
+        likes={63}
+        date='Yesterday'
+        colors={[
+          '#708993',
+          '#139ed5ff',
+          '#938970ff',
+          '#937090ff'
+        ]}
+      />
+      <ColorCard
+        likes={63}
+        date='Yesterday'
+        colors={[
+          '#708993',
+          '#139ed5ff',
+          '#938970ff',
+          '#937090ff'
+        ]}
+      />
+      <ColorCard
+        likes={63}
+        date='Yesterday'
+        colors={[
+          '#708993',
+          '#139ed5ff',
+          '#938970ff',
+          '#937090ff'
+        ]}
       />
     </div>
   )

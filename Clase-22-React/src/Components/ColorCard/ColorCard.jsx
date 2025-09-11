@@ -21,3 +21,39 @@ Ejemplo de uso:
 
 No hace falta fidelidad visual, pero si se deben ver los colores de fondo
 */
+
+import './ColorCard.css'
+import React from 'react'
+
+export default function ColorCard(propiedades) {
+    return (
+        <div className='color-card'>
+            <div className='color-card__pallette-container'>
+                <div className='color-card__color-value' style={
+                    {
+                        backgroundColor: propiedades.colors[0]
+                    }
+                }></div>
+                <div className='color-card__color-value' style={
+                    {
+                        backgroundColor: propiedades.colors[1]
+                    }
+                }></div>
+                <div className='color-card__color-value' style={
+                    {
+                        backgroundColor: propiedades.colors[2]
+                    }
+                }></div>
+                <div className='color-card__color-value' style={
+                    {
+                        backgroundColor: propiedades.colors[3]
+                    }
+                }></div>
+            </div>
+            <div className='color-card__bottom-container'>
+                <button className='color-card__likes'>{propiedades.likes} likes</button>
+                <span className='color-card__date'>{propiedades.date}</span>
+            </div>
+        </div>
+    )
+}
