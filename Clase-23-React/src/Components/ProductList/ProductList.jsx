@@ -32,6 +32,7 @@ const ProductList = () => {
             )
         }
     )
+  
     return (
         <div>
             {lista_productos_JSX}
