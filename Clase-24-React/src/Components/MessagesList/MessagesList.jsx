@@ -1,23 +1,9 @@
 import React from 'react'
 import Message from '../Message/Message'
 
-const MessagesList = () => {
-  const messages = [
-    {
-      id: 1,
-      author: 'YO',
-      content: "Que tal!",
-      timestamp: '16:17'
-    },
-    {
-      id: 2,
-      author: 'Maria',
-      content: "Si",
-      timestamp: '16:18'
-    }
-  ]
-
-  const messages_list_JSX = messages.map(
+const MessagesList = (props) => {
+  
+  const messages_list_JSX = props.messages.map(
     (message) => {
       return (
         <Message

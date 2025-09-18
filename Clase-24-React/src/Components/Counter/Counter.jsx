@@ -8,6 +8,8 @@ const Counter = () => {
     */
     
 
+    //HOOKS
+    //Los hooks solo pueden ser invocados dentro de un componente
 
     //Hook (funcion de react) useState 
     //useState espera recibir el valor inicial de tu estado
@@ -16,10 +18,14 @@ const Counter = () => {
     //Para poder cambiar el valor del estado podemos usar la funcion de cambio (El Setter)
     //(IMPORTANTE): Si llamo al setter el componente reaccionara y mostrara el nuevo valor en pantalla
 
+    /* 
+    EN VEZ DE HACER ESTO 
     const counter_state = useState(0)
     const counter_state_value = counter_state[0]
-    const counterStateSetter = counter_state[1]
-
+    const counterStateSetter = counter_state[1] 
+    */
+    //Desestructuracion de arrays
+    const [counter_state_value, counterStateSetter] = useState(0)
 
     const handleIncrement = () => {
 
