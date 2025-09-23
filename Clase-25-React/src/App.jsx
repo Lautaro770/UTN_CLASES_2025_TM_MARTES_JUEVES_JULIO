@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import MessageScreen from './Screens/MessageScreen/MessageScreen'
 import { Route, Routes } from 'react-router'
+import HomeScreen from './Screens/HomeScreen/HomeScreen'
 
 function App() {
  
@@ -9,11 +10,11 @@ function App() {
       <Routes>
         <Route 
           path='/' 
-          element={ <MessageScreen />}
+          element={ <HomeScreen />}
         />
         <Route 
-          path='/test' 
-          element={<h2>Hola</h2>}
+          path='/contacto' 
+          element={<MessageScreen />}
         />
       </Routes>
      
