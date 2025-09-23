@@ -13,7 +13,7 @@ function App() {
           element={ <HomeScreen />}
         />
         <Route 
-          path='/contacto' 
+          path='/contacto/:id_contacto' 
           element={<MessageScreen />}
         />
       </Routes>

@@ -3,8 +3,11 @@ import MessagesList from '../../Components/MessagesList/MessagesList'
 import NewMessageForm from '../../Components/NewMessageForm/NewMessageForm'
 import Navbar from '../../Components/Navbar/Navbar'
 import Counter from '../../Components/Counter/Counter'
+import { useParams } from 'react-router'
 
 function MessageScreen() {
+    const id_contacto = useParams().id_contacto
+    console.log(id_contacto)
     const [messages, setMessages] = useState([
         {
             id: 1,
