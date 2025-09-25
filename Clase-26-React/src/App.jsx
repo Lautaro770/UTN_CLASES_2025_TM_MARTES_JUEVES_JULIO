@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router'
 import HomeScreen from './Screens/HomeScreen/HomeScreen'
 import './styles/global.css'
 import ContactListContextProvider from './Context/ContactListContext'
+import ContactDetailContextProvider from './Context/ContactDetailContext'
 
 function App() {
  
@@ -16,9 +17,13 @@ function App() {
             element={ <HomeScreen />}
           />
           <Route 
-            path='/contacto/:id_contacto' 
-            element={<MessageScreen />}
-          />
+            element={<ContactDetailContextProvider/>}
+          >
+            <Route 
+              path='/contacto/:id_contacto' 
+              element={<MessageScreen />}
+            />
+          </Route> 
         </Routes>
       </ContactListContextProvider>
      

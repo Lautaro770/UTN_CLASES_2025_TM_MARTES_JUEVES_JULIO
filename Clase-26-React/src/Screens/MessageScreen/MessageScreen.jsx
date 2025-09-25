@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import MessagesList from '../../Components/MessagesList/MessagesList'
 import NewMessageForm from '../../Components/NewMessageForm/NewMessageForm'
 import Navbar from '../../Components/Navbar/Navbar'
@@ -7,48 +7,13 @@ import { useParams } from 'react-router'
 import { getContactById } from '../../services/contactService'
 import ContactList from '../../Components/ContactList/ContactList'
 import './messageScreen.css'
+import { ContactDetailContext } from '../../Context/ContactDetailContext'
 
 function MessageScreen() {
     
     
-    const [messages, setMessages] = useState([])
-    const [isLoading, setIsLoading] = useState(false)
+    const {isContactDetailLoading, contactDetailed, onCreateNewMessage} = useContext(ContactDetailContext)
 
-
-    const onCreateNewMessage = (new_message) => {
-        console.log("Mensaje: ", new_message)
-        const new_message_object = {
-            content: new_message,
-            author: 'YO',
-            timestamp: '19:00',
-            id: messages.length + 1
-        }
-        const messages_cloned = [...messages]
-        messages_cloned.push(new_message_object)
-        setMessages(messages_cloned)
-    }
-    
-    const {id_contacto} = useParams()
-
-    function loadContactById (contact_id){
-        setIsLoading(true)
-        //Ejecutamos una accion luego de 2 seg
-        setTimeout(
-            () => {
-                const contacto = getContactById(contact_id)
-                setMessages(contacto.messages)
-                setIsLoading(false)
-            },
-            2000
-        )
-    }
-
-    useEffect(
-        () => {
-            loadContactById(id_contacto)
-        },
-        [id_contacto]
-    )
 
     return (
         <div className='message-screen'>
@@ -57,11 +22,15 @@ function MessageScreen() {
             </div>
             <div className='message-screen__messages-container'>
                 {
-                    isLoading 
+                    isContactDetailLoading 
                     ? <span>cargando...</span>
-                    : <MessagesList 
-                        messages={messages} 
-                    />
+                    : (
+                        contactDetailed 
+                        ? <MessagesList 
+                            messages={contactDetailed.messages} 
+                        />
+                        : <span>contacto no encontrado</span>
+                    )
                 }
                 
                 <div className='messages-form-container'>
