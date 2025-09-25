@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ContactListContext } from '../../Context/ContactListContext'
 
 const NewMessageForm = (props) => {
-    
+    console.log(useContext(ContactListContext))
     const handleSubmit = (event) =>{
         event.preventDefault()
         const form = event.target
